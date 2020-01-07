@@ -1,0 +1,2 @@
+#!/bin/bash
+RUN yum -y install http php php-gd php-mysql
