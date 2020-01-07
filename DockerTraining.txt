@@ -1,0 +1,50 @@
+Lab 1: http://labsap.s3-website-us-west-1.amazonaws.com/
+
+Lab 2: http://labsap.s3-website-us-west-1.amazonaws.com/index2.html
+
+VPC ID
+vpc-0b2a435dffd757f3a
+
+
+Pre test: https://mymapit.in/code4/tiny/fU1rCg
+
+sudo apt -get -y install docker
+
+Docs: https://drive.google.com/drive/folders/1D_0PzhGKLpGBHPnvfVh4mijn-0sDWWjE?usp=sharing
+https://drive.google.com/drive/folders/1zGjwkaR0nr9iqJcot7XBOyspzCf6VwP3?usp=sharing
+
+
+sudo apt-get -y install docker
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl status docker
+docker pull httpd:2.4
+docker info
+
+docker run -d --name testapache httpd:2.4
+
+docker info  
+docker images
+docker ps
+docker ps -a
+docker inspect
+
+
+
+docker inspect testapache|grep -i pid
+            "Pid": 31382,
+            "PidMode": "",
+            "PidsLimit": null,
+AP-LAB-ROLE15:~/environment $ sudo ls -la /proc/31382/ns
+
+docker exec -it testapache /bin/bash
+ls -la
+exit
+
+docker rm testapache
+docker ps -a
+
+docker build -t <dockerid>/demoapp:1.0 demoapp/frontend
+
+
+
