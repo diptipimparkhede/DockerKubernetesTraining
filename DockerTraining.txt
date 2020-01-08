@@ -46,5 +46,18 @@ docker ps -a
 
 docker build -t <dockerid>/demoapp:1.0 demoapp/frontend
 
+student10.courseandlabs.com dns name
+
+
+https://kubernetes.io/docs/setup/production-environment/tools/kops/
+https://github.com/kubernetes/kops
+
+
+git clone https://github.com/mohanraz81/kube_install_kops.git ---Full Kubernetes Cluster setup
+./create_cluster.sh
+./delete_cluster.sh
+cw-role
+
+git clone https://github.com/mohanraz81/myapp1808.git --has all the Kubernetes Deployment code
 
 
