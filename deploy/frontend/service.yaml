@@ -2,11 +2,11 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: api
+  name: diptiapi
   namespace: demoapp
 spec:
   selector:
-    app: demoapp
+    app: diptiapp
     tier: frontend
   ports:
   - protocol: "TCP"

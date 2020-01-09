@@ -54,10 +54,57 @@ https://github.com/kubernetes/kops
 
 
 git clone https://github.com/mohanraz81/kube_install_kops.git ---Full Kubernetes Cluster setup
-./create_cluster.sh
+./create_cluster.sh student10.courseandlabs.com cw-role
 ./delete_cluster.sh
 cw-role
 
 git clone https://github.com/mohanraz81/myapp1808.git --has all the Kubernetes Deployment code
 
+kubectl config set-context $(kubectl config current-context) --namespace=demoapp--Set the Namespace
+kubectl config view | grep namespace--View the kube config
 
+
+
+kubectl rollout history deployment.v1beta1.apps/demoapp-fe
+
+kubectl rollout undo deployment.v1beta1.apps/demoapp-fe
+
+https://eksworkshop.com/intermediate/240_monitoring/deploy-prometheus/
+
+
+sh -x install_helm.sh 
+kubectl create namespace prometheus
+
+helm install stable/prometheus \
+    --name prometheus \
+    --namespace prometheus \
+    --set alertmanager.persistentVolume.storageClass="gp2" \
+    --set server.persistentVolume.storageClass="gp2"
+
+kubectl get all -n prometheus
+
+
+kubectl create namespace grafana
+helm install stable/grafana \
+    --name grafana \
+    --namespace grafana \
+    --set persistence.storageClassName="gp2" \
+    --set adminPassword='EKS!sAWSome' \
+    --set datasources."datasources\.yaml".apiVersion=1 \
+    --set datasources."datasources\.yaml".datasources[0].name=Prometheus \
+    --set datasources."datasources\.yaml".datasources[0].type=prometheus \
+    --set datasources."datasources\.yaml".datasources[0].url=http://prometheus-server.prometheus.svc.cluster.local \
+    --set datasources."datasources\.yaml".datasources[0].access=proxy \
+    --set datasources."datasources\.yaml".datasources[0].isDefault=true \
+    --set service.type=LoadBalancer
+
+kubectl get svc -n grafana -o wide
+
+kubectl get secret --namespace grafana grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
+
+gcr.io/google_containers/hpa-example 
+
+while true; do wget -q -O- http://demoapp.student210.courseandlabs.com; done
+
+
+https://eksworkshop.com/intermediate/240_monitoring/deploy-prometheus/

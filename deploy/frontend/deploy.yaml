@@ -2,12 +2,12 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: demoapp-fe
+  name: diptiapp-fe
   namespace: demoapp
 spec:
   selector:
     matchLabels:
-      app: demoapp
+      app: diptiapp
       tier: frontend
   replicas: 2
   minReadySeconds: 5
@@ -20,12 +20,12 @@ spec:
   template: 
     metadata:
       labels:
-        app: demoapp
+        app: diptiapp
         tier: frontend
     spec:
       containers:
-      - name: demoappfe
-        image: diptipimparkhede/demo-logagent:1.0
+      - name: diptiappfe
+        image: gcr.io/google_containers/hpa-example
         imagePullPolicy: Always
         ports:
         - containerPort: 80
