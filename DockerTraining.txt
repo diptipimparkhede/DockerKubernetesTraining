@@ -138,3 +138,8 @@ INFO Writing AWS credentials to "/home/ubuntu/.aws/credentials" (https://docs.aw
 ? Base Domain student10.courseandlabs.com
 ? Cluster Name democluster
 ? Pull Secret [? for help] 
+
+Access the OpenShift web-console here: https://console-openshift-console.apps.democluster.student10.courseandlabs.com 
+INFO Login to the console with user: kubeadmin, password: 2rDZP-YGDnG-irqIm-qR7
+
+./openshift-install destroy cluster
