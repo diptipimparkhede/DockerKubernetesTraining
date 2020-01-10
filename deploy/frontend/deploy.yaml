@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: diptiappfe
-        image: gcr.io/google_containers/hpa-example
+        image: diptipimparkhede/myfirstdocker:1.0
         imagePullPolicy: Always
         ports:
         - containerPort: 80

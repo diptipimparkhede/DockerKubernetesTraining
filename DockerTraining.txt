@@ -108,3 +108,33 @@ while true; do wget -q -O- http://demoapp.student210.courseandlabs.com; done
 
 
 https://eksworkshop.com/intermediate/240_monitoring/deploy-prometheus/
+
+
+
+curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/local/bin/kubectl
+
+kubectl delete statefulset mysql -n demoapp
+https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-install-linux-4.2.13.tar.gz
+
+{"auths":{"cloud.openshift.com":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K2RpcHRpcGltcGFya2hlZGUxd2NmMjQ0cnp1bHZ0aHp0dzY2dzN1dWc4ZXA6UVdNRkRBRlQyNDEwM0M4R1hIWUoyMERQRFpKMFFUWDk0U0pYVEdGOUM2UTZYQVdJUUtCQk0yQzJNVTJLM1pNTQ==","email":"pai.dipti@gmail.com"},"quay.io":{"auth":"b3BlbnNoaWZ0LXJlbGVhc2UtZGV2K2RpcHRpcGltcGFya2hlZGUxd2NmMjQ0cnp1bHZ0aHp0dzY2dzN1dWc4ZXA6UVdNRkRBRlQyNDEwM0M4R1hIWUoyMERQRFpKMFFUWDk0U0pYVEdGOUM2UTZYQVdJUUtCQk0yQzJNVTJLM1pNTQ==","email":"pai.dipti@gmail.com"},"registry.connect.redhat.com":{"auth":"NTI4ODEwNzB8dWhjLTFXQ0YyNDRSWlVMdnRoelR3NjZXM3VVRzhlcDpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSmlaR1EwWkRaa05XRm1ObVkwT1RNd09HUm1ZbUppWm1RNE1EWTFPVFUzWVNKOS5iVUxnelhDNThuMGtBUzFacUhfY2szS3gwbTNHcy1GNjRvaE9INjFScjBQcFBkeGJhdk5zRzRnYWdKWWdBZEo1dlpRc3BRbzJ6QktkdDhfNUl1NzRobkFkclFxcVRPUVd0OWh6aFMwcTZTZ09VcGtCUVQzcnNWXzFqNHdja0Y0WDRPeThOWU04YThVbVFnTnNweVBoQ3BQcFZzRTltalRDWlViU2hMNnNmVVp3aUF1VDctSzdfS1dfRXlpWURINGpZNHE1MTJIaWVPX19zZDQtWlNreUVMSzA5dEtodWR5U1ZxdVVfc0YwQmZOU1M3Z1lvTjBFVmt5Z25tTFVEa0d3Yk1JM2tQMHFObzAxckxlTkpSSjJJUmRYVi1KZGhpTmd3UE11Z3JwV01Faml6RXdTWXB4VEJBb09EblNhRTFmNXBWdmhpZ1VnVzRqSTFGNEFPbVBBQlMydjR4RmQ0d1B0RzNQbS1MSW9wa2lIZVdLcnp1eUg3ZjVULXJhaTY2ZnFPVWUyMU9NVmNnc2xxS1dlY3RkaGs5dk1oaU9td3JBczktT1ZTa01DdV9iVjI5VGVyUnlGUHRkdkJZdjBOSW53NmdrOGVNNU5McHdoLUR0VTktMWowUnFHVV9fWklxczg5Z0R1dktXdTBPM2tYVHNMQnZGaFZDUGlfWTZxLUI3bjQ3a011OEdJbnJjbXd1NV85NmNXeUhMaVNqcVVZVElQZDdIVmhSWTU4UDFMbUFNbncxZGhVbkVielEzNkZiSlh4azhGZm5VdThyTFhxUzJhNF9SZnp2dW4wUk53Y1NhRHFhcDdmbnJ3T1dQTXdsTk9IQmEtVU5TbEZlaW5teDk0Z1FFb0g4YjRkX1QzWTN1U1pDdFJlN3pxMTF1c3V2TXZTTVIzVUdJdGJuOA==","email":"pai.dipti@gmail.com"},"registry.redhat.io":{"auth":"NTI4ODEwNzB8dWhjLTFXQ0YyNDRSWlVMdnRoelR3NjZXM3VVRzhlcDpleUpoYkdjaU9pSlNVelV4TWlKOS5leUp6ZFdJaU9pSmlaR1EwWkRaa05XRm1ObVkwT1RNd09HUm1ZbUppWm1RNE1EWTFPVFUzWVNKOS5iVUxnelhDNThuMGtBUzFacUhfY2szS3gwbTNHcy1GNjRvaE9INjFScjBQcFBkeGJhdk5zRzRnYWdKWWdBZEo1dlpRc3BRbzJ6QktkdDhfNUl1NzRobkFkclFxcVRPUVd0OWh6aFMwcTZTZ09VcGtCUVQzcnNWXzFqNHdja0Y0WDRPeThOWU04YThVbVFnTnNweVBoQ3BQcFZzRTltalRDWlViU2hMNnNmVVp3aUF1VDctSzdfS1dfRXlpWURINGpZNHE1MTJIaWVPX19zZDQtWlNreUVMSzA5dEtodWR5U1ZxdVVfc0YwQmZOU1M3Z1lvTjBFVmt5Z25tTFVEa0d3Yk1JM2tQMHFObzAxckxlTkpSSjJJUmRYVi1KZGhpTmd3UE11Z3JwV01Faml6RXdTWXB4VEJBb09EblNhRTFmNXBWdmhpZ1VnVzRqSTFGNEFPbVBBQlMydjR4RmQ0d1B0RzNQbS1MSW9wa2lIZVdLcnp1eUg3ZjVULXJhaTY2ZnFPVWUyMU9NVmNnc2xxS1dlY3RkaGs5dk1oaU9td3JBczktT1ZTa01DdV9iVjI5VGVyUnlGUHRkdkJZdjBOSW53NmdrOGVNNU5McHdoLUR0VTktMWowUnFHVV9fWklxczg5Z0R1dktXdTBPM2tYVHNMQnZGaFZDUGlfWTZxLUI3bjQ3a011OEdJbnJjbXd1NV85NmNXeUhMaVNqcVVZVElQZDdIVmhSWTU4UDFMbUFNbncxZGhVbkVielEzNkZiSlh4azhGZm5VdThyTFhxUzJhNF9SZnp2dW4wUk53Y1NhRHFhcDdmbnJ3T1dQTXdsTk9IQmEtVU5TbEZlaW5teDk0Z1FFb0g4YjRkX1QzWTN1U1pDdFJlN3pxMTF1c3V2TXZTTVIzVUdJdGJuOA==","email":"pai.dipti@gmail.com"}}}
+
+Open shift cluster steps
+
+ wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-install-linux-4.2.13.tar.gz
+ tar -zxvf openshift-install-linux-4.2.13.tar.gz 
+ 
+  wget https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-linux-4.2.13.tar.gz
+  tar -zxvf openshift-client-linux-4.2.13.tar.gz
+  
+  
+  ./openshift-install create cluster --dir=./
+? Platform aws
+? AWS Access Key ID AKIA2YKPZZXUP6DLID64
+? AWS Secret Access Key [? for help] ****************************************
+INFO Writing AWS credentials to "/home/ubuntu/.aws/credentials" (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) 
+? Region us-west-2
+? Base Domain student10.courseandlabs.com
+? Cluster Name democluster
+? Pull Secret [? for help] 
